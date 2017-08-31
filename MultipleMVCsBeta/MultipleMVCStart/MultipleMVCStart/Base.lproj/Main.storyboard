@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EvC-PV-Sde">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Color Palette-->
+        <scene sceneID="Ixm-TT-yeG">
+            <objects>
+                <splitViewController id="cDG-Qj-qYX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Color Palette" id="d4d-mN-gn2"/>
+                    <connections>
+                        <segue destination="XBu-ny-Fah" kind="relationship" relationship="masterViewController" id="Qwm-Fq-Aaf"/>
+                        <segue destination="rsJ-1P-VAq" kind="relationship" relationship="detailViewController" id="r5G-KZ-mMI"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vd3-nd-n5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1442" y="-669"/>
+        </scene>
+        <!--Segued View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SeguedViewController" customModule="MultipleMVCStart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qCq-6C-kJu">
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="d7Q-PR-13Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="277"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGK-Ad-BOb">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="277"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="rsJ-1P-VAq" kind="showDetail" identifier="addRed" action="showViewController:sender:" id="HL2-M7-GKx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdC-hn-fBC">
+                                                <rect key="frame" x="171.5" y="0.0" width="171.5" height="277"/>
+                                                <color key="backgroundColor" red="0.0022677889599999998" green="0.79866369150000005" blue="0.0035186810549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="rsJ-1P-VAq" kind="showDetail" identifier="addGreen" id="miD-Wg-K9H"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5TG-Dw-5EE">
+                                        <rect key="frame" x="0.0" y="277" width="343" height="277"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7H-RL-JCc">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="277"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="rsJ-1P-VAq" kind="showDetail" identifier="addBlue" action="showViewController:sender:" id="iGk-Jx-SMs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZm-vj-8tB">
+                                                <rect key="frame" x="171.5" y="0.0" width="171.5" height="277"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="rsJ-1P-VAq" kind="presentation" identifier="addYellow" id="qZy-R1-d4l"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qCq-6C-kJu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="L6p-l5-5XC"/>
+                            <constraint firstItem="qCq-6C-kJu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Q7u-1T-fRO"/>
+                            <constraint firstItem="qCq-6C-kJu" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="RsJ-W0-zsX"/>
+                            <constraint firstItem="qCq-6C-kJu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZJc-6k-FaD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="s1r-a5-nTo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="34.632683658170919"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MvY-tN-r2e">
+            <objects>
+                <tabBarController storyboardIdentifier="MainEntryPoint" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EvC-PV-Sde" customClass="ViewController" customModule="MultipleMVCStart" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="8eN-dW-Pav">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cDG-Qj-qYX" kind="relationship" relationship="viewControllers" id="292-3H-m5d"/>
+                        <segue destination="XBu-ny-Fah" kind="relationship" relationship="viewControllers" id="qfy-dY-dqs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0k-oH-vOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1442" y="35"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="LeK-qa-fRc">
+            <objects>
+                <viewController id="rsJ-1P-VAq" customClass="MVCViewController" customModule="MultipleMVCStart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="izI-v2-7cb"/>
+                        <viewControllerLayoutGuide type="bottom" id="CHB-da-JaL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kcX-nK-ARe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xdi-hx-1vm">
+                                <rect key="frame" x="159" y="247" width="56" height="173"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="TAv-MI-tAi">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="102"/>
+                                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="75"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeMe:" destination="rsJ-1P-VAq" eventType="touchUpInside" id="kIX-1i-Pnz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81N-mM-a7P">
+                                        <rect key="frame" x="0.0" y="122" width="56" height="51"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saturateColor:" destination="rsJ-1P-VAq" eventType="touchUpInside" id="vCE-cy-u7s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Xdi-hx-1vm" firstAttribute="centerX" secondItem="kcX-nK-ARe" secondAttribute="centerX" id="bfj-2R-Yl2"/>
+                            <constraint firstItem="Xdi-hx-1vm" firstAttribute="centerY" secondItem="kcX-nK-ARe" secondAttribute="centerY" id="wb1-Ww-lOa"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ycc-DX-VFo" appends="YES" id="60D-KW-5aF"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="gkk-ae-tVG"/>
+                    <navigationItem key="navigationItem" id="jc8-f5-0xw"/>
+                    <connections>
+                        <outlet property="BigX" destination="TAv-MI-tAi" id="GAS-U3-wqU"/>
+                        <outlet property="ContainerForBigX" destination="kcX-nK-ARe" id="2Go-Nb-B44"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8Z-Xa-7Od" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="ycc-DX-VFo">
+                    <connections>
+                        <action selector="hideScreenGestureAtion:" destination="rsJ-1P-VAq" id="KIE-PX-kkw"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-463" y="-670"/>
+        </scene>
+        <!--Full Screen-->
+        <scene sceneID="Wb0-Ar-YBd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XBu-ny-Fah" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Full Screen" id="leu-WG-Qzf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QK2-Ke-xIe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NyL-Mq-6Ld"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTl-OB-fNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-463.19999999999999" y="34.632683658170919"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="r5G-KZ-mMI"/>
+        <segue reference="Qwm-Fq-Aaf"/>
+    </inferredMetricsTieBreakers>
+</document>
